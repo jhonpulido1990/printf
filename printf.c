@@ -21,19 +21,19 @@ int _printf(const char *format, ...)
 	{
 		if (*p != '%')
 		{
-			putchar(*p);
+			_putchar(*p);
 			continue;
 		}
 		switch (*++p)
 		{
 		case 'c':
-			print_c(va_arg(ap, char *));
+			print_s(va_arg(ap, char *));
 			break;
 		case 's':
 			print_s(va_arg(ap, char *));
 			break;
 		default:
-			putchar(*p);
+			_putchar(*p);
 			break;
 		}
 	}

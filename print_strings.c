@@ -21,23 +21,11 @@ int print_c(char *str)
  * Return: -1 if fail or NULL
  */
 
-int print_s(char *str)
+void print_s(char *str)
 {
-	char *p;
-	unsigned int i = 0;
-
-	p = str;
-
-	if (p == NULL)
+	int a = 0;
+	for (a = 0; str[a] != '\0'; a++)
 	{
-		return (-1);
+		_putchar(str[a]);
 	}
-
-	while (*p)
-	{
-		_putchar(*p);
-		p++;
-		i++;
-	}
-	return (i);
 }

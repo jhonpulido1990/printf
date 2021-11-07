@@ -13,6 +13,6 @@ int _printf(const char *format, ...);
 /*function prints a char */
 int print_c(char *str);
 /*function prints a string */
-int print_s(char *str);
+void print_s(char *str);
 
 #endif /*HEADER_FILE*/
