@@ -1,18 +1,20 @@
 #include "main.h"
+
 /**
- * 
- * 
- * @brief 
- * 
+ * _printf - function tha call a surutine to print different formats
+ * of data types
+ * @format: string to be printed with parameters and variables
+ * Return: 0 Succes
  */
+
 int _printf(const char *format, ...)
 {
 	va_list ap; /* points to each unnamed arg in turn */
-	char *s;
+	/*char *s;*/
 	const char *p;
-	int integer;
-	unsigned int unintenger;
-	double floats;
+	/*int integer;*/
+	/*unsigned int unintenger;*/
+	/*double floats;*/
 
 	va_start(ap, format); /* make ap point to 1st unnamed arg */
 	for (p = format; *p; p++)
@@ -24,29 +26,11 @@ int _printf(const char *format, ...)
 		}
 		switch (*++p)
 		{
-		case 'd':
-			s = va_arg(ap, int);
-			printf("%d", s);
-			break;
-		case 'o':
-			unintenger = va_arg(ap, unsigned int);
-			printf("%o", unintenger);
-			break;
-		case 'i':
-			s = va_arg(ap, int);
-			// printf("%i", strlen(s));
-			// break;
-		case 'f':
-			floats = va_arg(ap, double);
-			printf("%f", floats);
-			break;
-		case 'u':
-			unintenger = va_arg(ap, unsigned int);
-			printf("%u", unintenger);
+		case 'c':
+			print_c(va_arg(ap, char *));
 			break;
 		case 's':
-			for (s = va_arg(ap, char *); *s; s++)
-				putchar(*s);
+			print_s(va_arg(ap, char *));
 			break;
 		default:
 			putchar(*p);
