@@ -10,9 +10,11 @@
 int _putchar(char c);
 /*function that produces output according to a format*/
 int _printf(const char *format, ...);
-/*function prints a char */
-int print_c(char *str);
 /*function prints a string */
 void print_s(char *str);
+/*function prints number unsigned*/
+void print_ui(unsigned int n);
+/*function print number*/
+void print_i(int n);
 
 #endif /*HEADER_FILE*/
