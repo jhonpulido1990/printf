@@ -6,15 +6,25 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+/**
+ * @brief 
+ * 
+ */
+typedef struct format
+{
+	char *id;
+	int (*f)();
+}select_op;
+
 /*call a funtion _putchar*/
 int _putchar(char c);
 /*function that produces output according to a format*/
 int _printf(const char *format, ...);
 /*function prints a string */
-void print_s(char *str);
+int print_s(va_list str);
 /*function prints number unsigned*/
-void print_ui(unsigned int n);
+void print_c(unsigned int n);
 /*function print number*/
-void print_i(int n);
+void print_per(int n);
 
 #endif /*HEADER_FILE*/

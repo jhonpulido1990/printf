@@ -7,39 +7,34 @@
  */
 int _printf(const char *format, ...)
 {
+	select_op modulo[] = {
+		{"s", print_s}
+	};
+
 	va_list ap; /* points to each unnamed arg in turn */
-	const char *p;
+	unsigned int i = 0, j = 0, len = 0;
 
 	va_start(ap, format); /* make ap point to 1st unnamed arg */
-	for (p = format; *p; p++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (*p != '%')
+		if (format[i] != '%')
 		{
-			_putchar(*p);
-			continue;
+			_putchar(format[i]);
+			len++;
 		}
-		switch (*++p)
+		else
 		{
-		case 'c':
-			_putchar(va_arg(ap, int));
-			break;
-		case 's':
-			print_s(va_arg(ap, char *));
-			break;
-		case 'u':
-			print_ui(va_arg(ap, unsigned int));
-			break;
-		case 'd':
-			print_i(va_arg(ap, int));
-			break;
-		case 'i':
-			print_i(va_arg(ap, int));
-			break;
-		default:
-			_putchar(*p);
-			break;
+			for (j = 0; j < 1; j++)
+			{
+				if (modulo[j].id[0] == format[i + 1])
+				{
+					len += modulo[j].f(ap);
+					i++;
+				}
+				
+			}
 		}
 	}
 	va_end(ap); /* clean up when done */
-	return (0);
+	return (len);
 }

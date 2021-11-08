@@ -3,13 +3,15 @@
  * print_s - function that prints a string
  * @str: list of characters to be printed
  */
-void print_s(char *str)
+int print_s(va_list str)
 {
+	char *s;
 	int a = 0;
 
-	for (a = 0; str[a] != '\0'; a++)
+	s = va_arg(str, char *);
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		_putchar(str[a]);
+		_putchar(s[a]);
 	}
 }
 /**
