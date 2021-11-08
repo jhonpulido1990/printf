@@ -25,6 +25,6 @@ int print_s(va_list str);
 /*function prints a character*/
 int print_c(va_list c);
 /*function print number*/
-void print_per(int n);
+int print_per(void);
 
 #endif /*HEADER_FILE*/

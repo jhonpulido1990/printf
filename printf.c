@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	select_op modulo[] = {
-		{"s", print_s}, {"c", print_c}
+		{"s", print_s}, {"c", print_c}, {"%", print_per}
 	};
 
 	va_list ap; /* points to each unnamed arg in turn */
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			for (j = 0; j < 2; j++)
+			for (j = 0; j < 3; j++)
 			{
 				if (modulo[j].id[0] == format[i + 1])
 				{

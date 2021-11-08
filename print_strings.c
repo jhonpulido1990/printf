@@ -52,3 +52,16 @@ int print_c(va_list c)
 	_putchar(character);
 	return (0);
 }
+/**
+ * print_c - function that prints a string
+ * @c: list of characters to be printed
+ * Return: 0
+ */
+int print_per(void)
+{
+	char per;
+
+	per = '%';
+	_putchar(per);
+	return (0);
+}
