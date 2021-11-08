@@ -2,6 +2,7 @@
 /**
  * print_ui - function that prints numbers
  * @n: list of characters to be printed
+ * Return: 0 Success
  */
 int print_ui(unsigned int n)
 {
@@ -18,6 +19,7 @@ int print_ui(unsigned int n)
 /**
  * print_i - function that prints numbers
  * @n: list of characters to be printed
+ * Return: 0 Success
  */
 void print_i(int n)
 {
@@ -34,4 +36,24 @@ void print_i(int n)
 	}
 	a = (n % 10 + '0');
 	_putchar(a);
+}
+
+/**
+ * print_bin - function that prints a binary number
+ * @num: list of arguments
+ * Return: 0 Success
+ */
+int print_bin(int num)
+{
+
+	if (num >= 0 && num < 2)
+	{
+		_putchar(num + '0');
+	}
+	else
+	{
+		print_bin(num / 2);
+		_putchar((num % 2) + '0');
+	}
+	return (0);
 }
