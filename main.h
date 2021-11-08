@@ -22,8 +22,8 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 /*function prints a string */
 int print_s(va_list str);
-/*function prints number unsigned*/
-void print_c(unsigned int n);
+/*function prints a character*/
+int print_c(va_list c);
 /*function print number*/
 void print_per(int n);
 

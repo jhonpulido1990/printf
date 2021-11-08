@@ -1,51 +1,54 @@
 #include "main.h"
+ /**
+  * _putchar - writes the character c to stdout
+  * @c: The character to print
+  *
+  * Return: On success 1.
+  * On error, -1 is returned, and errno is set appropriately.
+  */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
 /**
  * print_s - function that prints a string
  * @str: list of characters to be printed
+ * Return: 0
  */
 int print_s(va_list str)
 {
 	char *s;
-	int a = 0;
+	int a;
 
 	s = va_arg(str, char *);
-	for (a = 0; s[a] != '\0'; a++)
+	if (s == NULL)
 	{
-		_putchar(s[a]);
+		s = "(null)";
+		for (a = 0; s[a]; a++)
+		{
+			_putchar(s[a]);
+		}
 	}
+	else
+	{
+		for (a = 0; s[a]; a++)
+		{
+			_putchar(s[a]);
+		}
+	}
+	return (0);
 }
 /**
- * print_ui - function that prints numbers
- * @n: list of characters to be printed
+ * print_c - function that prints a string
+ * @c: list of characters to be printed
+ * Return: 0
  */
-void print_ui(unsigned int n)
+int print_c(va_list c)
 {
-	int a = 0;
+	char character;
 
-	if (n / 10)
-	{
-		print_ui(n / 10);
-	}
-	a = (n % 10 + '0');
-	_putchar(a);
-}
-/**
- * print_i - function that prints numbers
- * @n: list of characters to be printed
- */
-void print_i(int n)
-{
-	int a = 0;
-
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	if (n / 10)
-	{
-		print_i(n / 10);
-	}
-	a = (n % 10 + '0');
-	_putchar(a);
+	character = va_arg(c, int);
+	_putchar(character);
+	return (0);
 }
