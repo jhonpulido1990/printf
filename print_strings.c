@@ -53,3 +53,12 @@ int print_per(void)
 	_putchar(per);
 	return (1);
 }
+/**
+ * _putchar - function that prints a character
+ * @c: character to be printed
+ * Return: 0 Success
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
