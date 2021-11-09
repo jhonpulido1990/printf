@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_bin - function that recive va_list arg and invoke print binary
+ * prin_bin - function that recive va_list arg and invoke print binary
  * @i: list of arguments
  * Return: nothing
  */
-int print_bin(va_list i)
+int prin_bin(va_list i)
 {
 	unsigned int num;
 
@@ -34,7 +34,7 @@ void print_binary(unsigned int num)
 }
 /**
  * print_oct - function that recive va_list arg and invoke print octal
- * @i: list of arguments
+ * @oct: list of arguments
  * Return: nothing
  */
 int print_oct(va_list oct)
@@ -47,7 +47,7 @@ int print_oct(va_list oct)
 }
 /**
  * print_octal - function that prints a octal number
- * @o: list of arguments
+ * @octal: list of arguments
  */
 void print_octal(unsigned int octal)
 {

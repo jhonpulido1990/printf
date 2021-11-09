@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_ui - function that prints numbers
+ * prin_ui - function that prints numbers
  * @ui: unsigned integer to be printed
  * Return: 0 Success
  */
-int print_ui(va_list ui)
+int prin_ui(va_list ui)
 {
 	unsigned int a = 0;
 	unsigned int b = 0;
@@ -18,11 +18,11 @@ int print_ui(va_list ui)
 	return (0);
 }
 /**
- * print_i - function that prints numbers
+ * prin_i - function that prints numbers
  * @i: objet ap with va_list parameters
  * Return: 0 Success
  */
-int print_i(va_list i)
+int prin_i(va_list i)
 {
 	int numero = 0;
 

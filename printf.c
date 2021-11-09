@@ -7,11 +7,8 @@
  */
 int _printf(const char *format, ...)
 {
-	select_op modulo[] = {
-		{"s", print_s}, {"c", print_c}, {"%", print_per}, {"i", print_i},
-		{"u", print_ui}, {"d", print_i}, {"b", print_bin}, {NULL, NULL}
-	};
-
+	select_op modulo[] = {{"s", print_s}, {"c", print_c}, {"%", print_per},
+	{"i", prin_i}, {"u", prin_ui}, {"d", prin_i}, {"b", prin_bin}, {NULL, NULL}};
 	va_list ap; /* points to each unnamed arg in turn */
 	unsigned int i = 0, j = 0, len = 0;
 
@@ -36,9 +33,11 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					_putchar(format[i]);
 					if (format[i + 1] != '%')
+					{
+						_putchar(format[i]);
 						_putchar(format[i + 1]);
+					}
 					i++;
 					break;
 				}

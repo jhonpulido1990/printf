@@ -27,13 +27,13 @@ int print_c(va_list c);
 /*function print percent*/
 int print_per(void);
 /*function print a integer*/
-int print_i(va_list i);
+int prin_i(va_list i);
 void print_integer(int n);
 /*function print a unsigned int*/
-int print_ui(va_list ui);
+int prin_ui(va_list ui);
 void print_uinteger(unsigned int n);
 /*function print number binary*/
-int print_bin(va_list num);
+int prin_bin(va_list num);
 void print_binary(unsigned int num);
 /*function print number octal*/
 int print_oct(va_list oct);
