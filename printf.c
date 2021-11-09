@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	unsigned int i = 0, j = 0, len = 0;
 
 	va_start(ap, format); /* make ap point to 1st unnamed arg */
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
