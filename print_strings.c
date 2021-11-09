@@ -51,5 +51,5 @@ int print_per(void)
 
 	per = '%';
 	_putchar(per);
-	return (0);
+	return (1);
 }
