@@ -8,12 +8,13 @@
 int _printf(const char *format, ...)
 {
 	select_op modulo[] = {{"s", print_s}, {"c", print_c}, {"%", print_per},
-	{"i", prin_i}, {"u", prin_ui}, {"d", prin_i}, {"b", prin_bin}, {"o", print_oct}, {NULL, NULL}};
+	{"i", prin_i}, {"u", prin_ui}, {"d", prin_i}, {"b", prin_bin},
+	{"o", print_oct}, {NULL, NULL}};
 	va_list ap; /* points to each unnamed arg in turn */
 	unsigned int i = 0, j = 0, len = 0;
 
 	va_start(ap, format); /* make ap point to 1st unnamed arg */
-	if (format == NULL)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -30,6 +31,7 @@ int _printf(const char *format, ...)
 				{
 					len += modulo[j].f(ap);
 					i++;
+					break;
 				}
 			}
 		}
