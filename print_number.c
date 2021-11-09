@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_ui - function that prints numbers
- * @n: list of characters to be printed
+ * @ui: unsigned integer to be printed
  * Return: 0 Success
  */
 int print_ui(va_list ui)
@@ -19,7 +19,7 @@ int print_ui(va_list ui)
 }
 /**
  * print_i - function that prints numbers
- * @n: list of characters to be printed
+ * @i: objet ap with va_list parameters
  * Return: 0 Success
  */
 int print_i(va_list i)
@@ -33,6 +33,7 @@ int print_i(va_list i)
 /**
  * print_integer - function that prints numbers
  * @n: list of characters to be printed
+ * Return: nothing
  */
 void print_integer(int n)
 {
@@ -51,7 +52,7 @@ void print_integer(int n)
 	_putchar(a + '0');
 }
 /**
- * print_integer - function that prints numbers
+ * print_uinteger - function that prints numbers
  * @n: list of characters to be printed
  */
 void print_uinteger(unsigned int n)
@@ -64,22 +65,4 @@ void print_uinteger(unsigned int n)
 	}
 	a = ((n % 10));
 	_putchar(a + '0');
-}
-/**
- * print_bin - function that prints a binary number
- * @num: list of arguments
- * Return: 0 Success
- */
-void print_binary(unsigned int num)
-{
-	if (num >= 0 && num < 2)
-	{
-		_putchar(num + '0');
-	}
-	else
-	{
-		print_bin(num / 2);
-		_putchar((num % 2) + '0');
-	}
-	return (0);
 }
