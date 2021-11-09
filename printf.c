@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 				{
 					len += modulo[j].f(ap);
 					i++;
+					break;
 				}
 			}
 		}
