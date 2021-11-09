@@ -7,14 +7,16 @@
 #include <stdarg.h>
 #include <stdlib.h>
 /**
- * @brief 
+ * struct format - struct to store format identifier and its function
+ * @id: format identifier
+ * @f: pointer to function 
  * 
  */
 typedef struct format
 {
 	char *id;
 	int (*f)();
-}select_op;
+} select_op;
 
 /*call a funtion _putchar*/
 int _putchar(char c);
