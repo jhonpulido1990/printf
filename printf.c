@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	select_op modulo[] = {
 		{"s", print_s}, {"c", print_c}, {"%", print_per},
 		{"i", print_i}, {"u", print_ui}, {"d", print_i},
-		{"b", print_bin}, {"o", print_oct}, {NULL, NULL}
+		{"b", print_bin}, {NULL, NULL}
 	};
 
 	va_list ap; /* points to each unnamed arg in turn */
@@ -28,12 +28,20 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			for (j = 0; j < 7; j++)
+			for (j = 0; j < 8; j++)
 			{
 				if (modulo[j].id[0] == format[i + 1])
 				{
 					len += modulo[j].f(ap);
 					i++;
+				}
+				else
+				{
+					_putchar(format[i]);
+					if (format[i + 1] != '%')
+						_putchar(format[i + 1]);
+					i++;
+					break;
 				}
 			}
 		}
