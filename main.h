@@ -24,7 +24,16 @@ int _printf(const char *format, ...);
 int print_s(va_list str);
 /*function prints a character*/
 int print_c(va_list c);
-/*function print number*/
+/*function print percent*/
 int print_per(void);
+/*function print a integer*/
+int print_i(va_list i);
+void print_integer(int n);
+/*function print a unsigned int*/
+int print_ui(va_list ui);
+void print_uinteger(unsigned int n);
+/*function print number binary*/
+int print_bin(va_list num);
+void print_binary(unsigned int num);
 
 #endif /*HEADER_FILE*/
