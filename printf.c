@@ -8,9 +8,8 @@
 int _printf(const char *format, ...)
 {
 	select_op modulo[] = {
-		{"s", print_s}, {"c", print_c}, {"%", print_per},
-		{"i", print_i}, {"u", print_ui}, {"d", print_i},
-		{"b", print_bin}, {NULL, NULL}
+		{"s", print_s}, {"c", print_c}, {"%", print_per}, {"i", print_i},
+		{"u", print_ui}, {"d", print_i}, {"b", print_bin}, {NULL, NULL}
 	};
 
 	va_list ap; /* points to each unnamed arg in turn */
