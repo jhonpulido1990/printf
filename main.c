@@ -9,11 +9,6 @@
  */
 int main(void)
 {
-	int len;
-	int len2;
-	unsigned int ui;
-	void *addr;
-
-	_printf("%c", '\0');
+	
 	return (0);
 }
