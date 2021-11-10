@@ -25,7 +25,7 @@ int print_s(va_list str)
 			_putchar(s[a]);
 		}
 	}
-	return (1);
+	return (a);
 }
 /**
  * print_c - function that prints a string
