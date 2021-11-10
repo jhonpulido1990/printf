@@ -25,7 +25,7 @@ int print_s(va_list str)
 			_putchar(s[a]);
 		}
 	}
-	return (0);
+	return (1);
 }
 /**
  * print_c - function that prints a string
@@ -38,7 +38,7 @@ int print_c(va_list c)
 
 	character = va_arg(c, int);
 	_putchar(character);
-	return (0);
+	return (1);
 }
 /**
  * print_per - function that prints a string
