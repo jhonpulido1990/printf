@@ -9,8 +9,8 @@
 /**
  * struct format - struct to store format identifier and its function
  * @id: format identifier
- * @f: pointer to function 
- * 
+ * @f: pointer to function
+ *
  */
 typedef struct format
 {
