@@ -40,6 +40,14 @@ int print_integer(int n)
 	int len = 0;
 	int a = 0;
 
+	/* fix negatives */
+
+	if (n < 0)
+	{
+		n = -n;
+		_putchar('-');
+	}
+
 	if (n / 10)
 	{
 		print_integer(n / 10);
