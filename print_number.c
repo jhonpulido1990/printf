@@ -35,7 +35,7 @@ int prin_i(va_list i)
  * @n: list of characters to be printed
  * Return: nothing
  */
-int print_integer(int n)
+int print_integer(long int n)
 {
 	int len = 0;
 	int a = 0;
