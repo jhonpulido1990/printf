@@ -37,5 +37,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(ap); /* clean up when done */
-	return (len);
+	return (len + i + 1);
 }
