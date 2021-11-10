@@ -35,21 +35,18 @@ int prin_i(va_list i)
  * @n: list of characters to be printed
  * Return: nothing
  */
-void print_integer(int n)
+int print_integer(int n)
 {
+	int len = 0;
 	int a = 0;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n = n * -1;
-	}
 	if (n / 10)
 	{
 		print_integer(n / 10);
 	}
 	a = ((n % 10));
-	_putchar(a + '0');
+	len += _putchar(a + '0');
+	return (len);
 }
 /**
  * print_uinteger - function that prints numbers
