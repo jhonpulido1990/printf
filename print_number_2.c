@@ -2,35 +2,38 @@
 /**
  * prin_bin - function that recive va_list arg and invoke print binary
  * @i: list of arguments
- * Return: nothing
+ * Return: length
  */
 int prin_bin(va_list i)
 {
 	unsigned int num;
+	int len = 0;
 
 	num = va_arg(i, unsigned int);
-	print_binary(num);
-	return (0);
+	print_binary(num, &len);
+	return (len);
 }
 /**
  * print_binary - function that prints a binary number
- * @num: list of arguments
- * Return: 0 Success
+ * @num: number to convert to binary number and print
+ * @len: length of the number
+ * Return: length
  */
-void print_binary(unsigned int num)
+int *print_binary(unsigned int num, int *len)
 {
 	unsigned int a = 0;
 	unsigned int b = 2;
 
 	if (num >= a && num < 2)
 	{
-		_putchar(num + '0');
+		*len += _putchar(num + '0');
 	}
 	else
 	{
-		print_binary(num / b);
-		_putchar((num % b) + '0');
+		print_binary((num / b), len);
+		*len += _putchar((num % b) + '0');
 	}
+	return (len);
 }
 /**
  * print_oct - function that recive va_list arg and invoke print octal
