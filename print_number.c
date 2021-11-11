@@ -26,7 +26,7 @@ int prin_i(va_list i)
 {
 	int numero = 0;
 
-	numero = va_arg(i, int);
+	numero = va_arg(i, long int);
 	print_integer(numero);
 	return (0);
 }
@@ -35,11 +35,17 @@ int prin_i(va_list i)
  * @n: list of characters to be printed
  * Return: nothing
  */
-int print_integer(int n)
+int print_integer(long int n)
 {
 	int len = 0;
 	int a = 0;
 
+	if (n < 0)
+	{
+		_putchar('-');
+		n = n * -1;
+		len++;
+	}
 	if (n / 10)
 	{
 		print_integer(n / 10);
