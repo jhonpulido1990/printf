@@ -24,36 +24,35 @@ int prin_ui(va_list ui)
  */
 int prin_i(va_list i)
 {
-	int numero = 0;
+	int num = 0;
+	int len = 0;
 
-	numero = va_arg(i, int);
-	print_integer(numero);
-	return (0);
+	num = va_arg(i, int);
+	print_integer(num, &len);
+	return (len);
 }
 /**
  * print_integer - function that prints numbers
  * @n: list of characters to be printed
  * Return: nothing
  */
-int print_integer(long int n)
+int *print_integer(long int n, int *len)
 {
-	int len = 0;
 	int a = 0;
 
 	/* fix negatives */
-
 	if (n < 0)
 	{
 		n = -n;
-		_putchar('-');
+		*len = _putchar('-');
 	}
 
 	if (n / 10)
 	{
-		print_integer(n / 10);
+		print_integer((n / 10), len);
 	}
-	a = ((n % 10));
-	len += _putchar(a + '0');
+	a = (n % 10);
+	*len += _putchar(a + '0');
 	return (len);
 }
 /**

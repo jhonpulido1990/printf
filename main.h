@@ -31,7 +31,7 @@ int print_per(void);
 /*function print a integer*/
 int prin_i(va_list i);
 /*int print_integer(int n);*/
-int print_integer(long int n);
+int *print_integer(long int n, int *len);
 /*function print a unsigned int*/
 int prin_ui(va_list ui);
 void print_uinteger(unsigned int n);
