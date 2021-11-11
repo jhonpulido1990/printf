@@ -30,11 +30,8 @@ int print_c(va_list c);
 int print_per(void);
 /*function print a integer*/
 int prin_i(va_list i);
-<<<<<<< HEAD
-=======
 /*int print_integer(int n);*/
->>>>>>> e9d25f25bd982f3ba20d578ffb2a770ec3892afa
-int print_integer(long int n);
+int print_integer(int n);
 /*function print a unsigned int*/
 int prin_ui(va_list ui);
 void print_uinteger(unsigned int n);

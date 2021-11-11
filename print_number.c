@@ -35,28 +35,17 @@ int prin_i(va_list i)
  * @n: list of characters to be printed
  * Return: nothing
  */
-int print_integer(long int n)
+int print_integer(int n)
 {
 	int len = 0;
 	int a = 0;
 
-<<<<<<< HEAD
 	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
 		len++;
 	}
-=======
-	/* fix negatives */
-
-	if (n < 0)
-	{
-		n = -n;
-		_putchar('-');
-	}
-
->>>>>>> e9d25f25bd982f3ba20d578ffb2a770ec3892afa
 	if (n / 10)
 	{
 		print_integer(n / 10);
