@@ -21,8 +21,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			if (format[i] != '\n')
-				len++; //Change for handling \n count
+			len++;
 		}
 		else
 		{
@@ -31,7 +30,6 @@ int _printf(const char *format, ...)
 				if (modulo[j].id[0] == format[i + 1])
 				{
 					len += modulo[j].f(ap);
-					//modulo[j].f(ap);
 					i++;
 					break;
 				}
