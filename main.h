@@ -37,7 +37,7 @@ int prin_ui(va_list ui);
 void print_uinteger(unsigned int n);
 /*function print number binary*/
 int prin_bin(va_list num);
-void print_binary(unsigned int num);
+int *print_binary(unsigned int num, int *len);
 /*function print number octal*/
 int print_oct(va_list oct);
 void print_octal(unsigned int octal);
