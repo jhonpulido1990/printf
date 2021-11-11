@@ -1,0 +1,62 @@
+TH man 3 "10 November 2016" "0.1" "_printf man page"
+.SH NAME
+.B _printf
+- print formatted information
+.SH SYNOPSIS
+.B #include "main.h"
+.B int _printf(const char *format, ...);
+.I format
+.B , ...)
+.SH DESCRIPTION
+.B _printf()
+
+Prints output information according to the specified format or formats accoridging to the following list of available options:
+
+
+The function _printf() produces output according to a
+.I format
+The string that specifies how the information for the output should be converted. The function
+.B_printf()
+writes output to
+.SH RETURN VALUE
+Upon successful return, this function returns the number of characters printed.
+If an output error is encountered, a negative value is returned.
+.SH Format of the format string
+The format string contains the text to be written to stdout. It can optionally contain embedded format tags that are replaced by the values specified in subsequent additional arguments and formatted as requested.
+The argument must correspond properly with the conversion specifier. By default, the arguments are used in the order given.
+Each conversion specification is introduced by character % followed by the format identifier.
+.SH The conversion specifier
+The format identifier is a character that specifies the type of conversion to be applied. 
+The syntax or format conversion tags is
+.B %[flags][width][.precision][length]
+ 
+.TP
+.B The format specifier for _printf are:
+.LP
+.B c
+The int argument is converted to an unsigned char, then the resulting character is written
+.LP
+.B s
+The const char * argument is expected to be a pointer to an array of character type (pointer to a string)
+.LP
+.B d, i
+The int argument is converted  to signed decimal notation.
+.LP
+.B u
+The unsigned int argument is converted to unsigned decimal notation.
+.LP
+.B %
+Is written but no argument is converted. Use %%.
+.SH EXAMPLE
+
+To print a integer number inside a text:
+
+_printf("Text what you want to print and %i, wher will be replaced by the variable value", variable);
+.B _printf
+
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Jhon Jairo Pulido, Andres Catano
