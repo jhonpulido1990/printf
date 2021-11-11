@@ -27,42 +27,25 @@ int prin_i(va_list i)
 	int num = 0;
 	int len = 0;
 
-<<<<<<< HEAD
 	num = va_arg(i, int);
 	print_integer(num, &len);
 	return (len);
-=======
-	numero = va_arg(i, long int);
-	print_integer(numero);
-	return (0);
->>>>>>> 78026ae7b9554cab654f4ba9de2e870762c64e44
 }
 /**
  * print_integer - function that prints numbers
- * @n: list of characters to be printed
- * Return: nothing
+ * @n: number to be printed
+ * @len: length of the number
+ * Return: length of the number
  */
-<<<<<<< HEAD
 int *print_integer(long int n, int *len)
-=======
-int print_integer(int n)
->>>>>>> 78026ae7b9554cab654f4ba9de2e870762c64e44
 {
 	int a = 0;
 
-<<<<<<< HEAD
 	/* fix negatives */
 	if (n < 0)
 	{
 		n = -n;
 		*len = _putchar('-');
-=======
-	if (n < 0)
-	{
-		_putchar('-');
-		n = n * -1;
-		len++;
->>>>>>> 78026ae7b9554cab654f4ba9de2e870762c64e44
 	}
 	if (n / 10)
 	{
