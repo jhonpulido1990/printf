@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			for (j = 0; modulo[j].f != NULL; j++)
-				{
+			{
 				if (modulo[j].id[0] == format[i + 1])
 				{
 					len += modulo[j].f(ap);
@@ -38,6 +38,8 @@ int _printf(const char *format, ...)
 				_putchar('%'), len++;
 		}
 	}
+
 	va_end(ap); /* clean up when done */
 	return (len);
+
 }
