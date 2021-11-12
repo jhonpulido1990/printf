@@ -36,10 +36,12 @@ int *print_integer(long int n, int *len);
 int prin_ui(va_list ui);
 void print_uinteger(unsigned int n);
 /*function print number binary*/
-int prin_bin(va_list num);
+int prin_bin(va_list i);
 int *print_binary(unsigned int num, int *len);
 /*function print number octal*/
 int print_oct(va_list oct);
 void print_octal(unsigned int octal);
+/*Advanced*/
+int print_rev(va_list str);
 
 #endif /*HEADER_FILE*/
