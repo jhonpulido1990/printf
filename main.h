@@ -34,15 +34,16 @@ int prin_i(va_list i);
 int *print_integer(long int n, int *len);
 /*function print a unsigned int*/
 int prin_ui(va_list ui);
-int *print_uinteger(unsigned int n, int *len);
-/*function print number binary*/
-int prin_bin(va_list i);
-int *print_binary(unsigned int num, int *len);
+void print_uinteger(unsigned int n);
+
 /*function print number octal*/
 int print_oct(va_list oct);
 void print_octal(unsigned int octal);
+
 /*Advanced*/
 int print_rev(va_list str);
-int print_rot13(va_list str);
+/*function print number binary*/
+int prin_bin(va_list i);
+int *print_binary(unsigned int num, int *len);
 
 #endif /*HEADER_FILE*/
