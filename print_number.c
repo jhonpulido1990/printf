@@ -2,20 +2,21 @@
 /**
  * prin_ui - function that prints numbers
  * @ui: unsigned integer to be printed
- * Return: 0 Success
+ * Return: length
  */
 int prin_ui(va_list ui)
 {
 	unsigned int a = 0;
 	unsigned int b = 0;
+	unsigned int len = 0;
 
 	a = va_arg(ui, unsigned int);
 	if (a < b)
 	{
 		a = a * -1;
 	}
-	print_uinteger(a);
-	return (0);
+	print_uinteger(a, &len);
+	return (len);
 }
 /**
  * prin_i - function that prints numbers
@@ -59,14 +60,16 @@ int *print_integer(long int n, int *len)
  * print_uinteger - function that prints numbers
  * @n: list of characters to be printed
  */
-void print_uinteger(unsigned int n)
+int *print_uinteger(unsigned int n, int *len)
 {
 	unsigned int a;
 
 	if (n / 10)
 	{
-		print_uinteger(n / 10);
+		print_uinteger((n / 10), len);
 	}
 	a = ((n % 10));
-	_putchar(a + '0');
+	*len += _putchar(a + '0');
+
+	return (len);
 }
