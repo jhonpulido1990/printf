@@ -8,16 +8,16 @@ int prin_ui(va_list ui)
 {
 	unsigned int a = 0;
 	unsigned int b = 0;
-	unsigned int len = 0;
 
 	a = va_arg(ui, unsigned int);
 	if (a < b)
 	{
 		a = a * -1;
 	}
-	print_uinteger(a, &len);
-	return (len);
+	print_uinteger(a);
+	return (0);
 }
+
 /**
  * prin_i - function that prints numbers
  * @i: objet ap with va_list parameters
@@ -60,16 +60,14 @@ int *print_integer(long int n, int *len)
  * print_uinteger - function that prints numbers
  * @n: list of characters to be printed
  */
-int *print_uinteger(unsigned int n, int *len)
+void print_uinteger(unsigned int n)
 {
 	unsigned int a;
 
 	if (n / 10)
 	{
-		print_uinteger((n / 10), len);
+		print_uinteger(n / 10);
 	}
 	a = ((n % 10));
-	*len += _putchar(a + '0');
-
-	return (len);
+	_putchar(a + '0');
 }
